@@ -236,7 +236,7 @@ function getBracketProgress(bracket) {
 }
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("bracket");
+  const [activeTab, setActiveTab] = useState("groups");
   const [userName, setUserName] = useState("");
   const [groupStandings, setGroupStandings] = useState(createInitialGroups);
   const [bracket, setBracket] = useState(() => createInitialBracket(createInitialGroups()));
