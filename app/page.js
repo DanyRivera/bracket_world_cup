@@ -394,17 +394,17 @@ export default function Home() {
 
         <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
 
-        <PredictionSaveCard
-          userName={userName}
-          champion={champion}
-          onUserNameChange={setUserName}
-          onClear={clearSavedPrediction}
-        />
-
         {activeTab === "groups" ? (
           <GroupsEditor groups={groupStandings} onReorder={reorderGroup} onReset={resetGroups} />
         ) : (
           <>
+            <PredictionSaveCard
+              userName={userName}
+              champion={champion}
+              onUserNameChange={setUserName}
+              onClear={clearSavedPrediction}
+            />
+
             {champion && <ChampionCard champion={champion} />}
 
             {!champion && progress.active && (
